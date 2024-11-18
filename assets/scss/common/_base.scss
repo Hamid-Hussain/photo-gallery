@@ -1,0 +1,30 @@
+@use "./variables" as *;
+body {
+  font-family: $font-family-sans-serif;
+}
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  color: #fff;
+  height: $header-height;
+  line-height: $header-height; // Vertically center the text
+  //   padding: 0 20px;
+  z-index: 100; // Ensure the header is above content
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  height: $footer-height;
+  line-height: $footer-height; // Vertically center the text
+  padding: 0 20px;
+  z-index: 100; // Ensure the footer is above content
+}
+.main {
+  padding-top: $header-height;
+  padding-bottom: $footer-height;
+  min-height: 100vh; // Ensure content fills the screen
+}

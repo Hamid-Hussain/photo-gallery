@@ -1,0 +1,71 @@
+@use "common/base" as *;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  // flex: 1 0 19%;
+  flex: 1 1 calc(20% - 16px) !important; /* 20% width for 5 items per row, minus gap */
+
+  box-sizing: border-box;
+  padding: 10px;
+}
+.flex-item img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50% !important; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for centering */
+  width: 50px !important; /* Button width */
+  height: 50px !important; /* Button height */
+  border-radius: 50%; /* Circular button */
+  // background: black; /* Semi-transparent background */
+  background-color: rgba(71, 71, 73, 0.5) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10; /* Ensure visibility over other elements */
+}
+
+.carousel-control-prev {
+  left: 10px !important; /* Adjust distance from the left side */
+}
+
+.carousel-control-next {
+  right: 10px !important; /* Adjust distance from the right side */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: 100%; /* Ensure icons fit the buttons */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M4.5 0L3.5 1 6.5 4 3.5 7 4.5 8 8 4z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M3.5 0L4.5 1 1.5 4 4.5 7 3.5 8 0 4z'/%3E%3C/svg%3E");
+}
+
+// .carousel-control-prev:hover,
+// .carousel-control-next:hover {
+//   background-color: rgba(69, 69, 70, 0.8); /* Darken background on hover */
+//   /* Darken background on hover */
+// }
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  outline: none; /* Remove focus outline */
+}
