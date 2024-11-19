@@ -1,10 +1,6 @@
 <script setup></script>
 <template>
-  <div class="footer">
-    <div class="footer-wrapper">
-      <div class="footer bg-footer">
-        <div class="footer-content">This is Footer</div>
-      </div>
-    </div>
-  </div>
+  <footer class="footer mt-5">
+    <p>© 2024 <strong>Photo Gallery</strong>. All Rights Reserved.</p>
+  </footer>
 </template>
