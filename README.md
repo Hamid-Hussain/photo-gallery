@@ -1,75 +1,50 @@
-# Nuxt Minimal Starter
+# Photo Gallery
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Photo gallery web application built using Nuxt 3, Bootstrap 5, and Sass with layout system with smooth/lazy navigation and optimized performance.
 
-## Setup
+## Installation
 
-Make sure to install dependencies:
+Use the package manager [npm](https://nodejs.org/en/download/package-manager) to install dependencies.
 
 ```bash
-# npm
+install node -version 18 or above
+```
+
+## Usage
+
+```javascript
+Installation
+Clone the Repository:
+
+git clone https://github.com/Hamid-Hussain/photo-gallery.git
+cd photo-gallery
+
+
+Install Dependencies:
 npm install
 
-# pnpm
-pnpm install
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+Run the Development Server:
 npm run dev
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+Open in Browser:
+Navigate to http://localhost:3000 to view the project.
 ```
 
-## Production
+## Project Structure
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
+├── assets/
+│   ├── styles/          # Custom Sass styles
+├── components/
+│   ├── Gallery.vue      # Gallery component
+│   ├── Navbar.vue       # Navigation bar
+│   ├── Footer.vue       # Footer section
+├── pages/
+│   ├── index.vue        # Home page
+├── public/
+├── nuxt.config.ts       # Nuxt configuration
+├── package.json         # Project dependencies
+└── README.md            # Documentation
 
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
