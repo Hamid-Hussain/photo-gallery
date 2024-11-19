@@ -19,6 +19,10 @@ export default defineNuxtConfig({
           href: "/bootstrap.rtl.min.css",
           rel: "stylesheet",
         },
+        {
+          rel: "stylesheet",
+          href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css",
+        },
       ],
       script: [
         {
@@ -31,5 +35,9 @@ export default defineNuxtConfig({
 
   modules: ["@nuxt/image"],
 
-  css: ["@/assets/scss/style.scss", "bootstrap/dist/css/bootstrap.min.css"],
+  css: [
+    "@/assets/scss/style.scss",
+    "bootstrap/dist/css/bootstrap.min.css",
+    "@fortawesome/fontawesome-free/css/all.min.css",
+  ],
 });
