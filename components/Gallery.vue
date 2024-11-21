@@ -1,5 +1,6 @@
 <script setup>
 import { imgURLs, hdImgURLS } from "~/constants/appConsts.js";
+import downloadBtn from "../assets/public/svg/cloud-download.svg";
 
 const selectedImg = ref(0);
 const zoomBox = ref(null);
@@ -93,7 +94,7 @@ onMounted(() => {
           <div class="carousel-item active">
             <div class="image-container" ref="imageContainer">
               <span class="zoom-btn">
-                <i class="fa-regular fa-magnifying-glass-plus"></i>
+                <img src="@/assets/public/svg/zoom-in.svg" alt="zoom-icon" />
                 Click Image to Zoom
               </span>
               <NuxtImg
@@ -105,7 +106,7 @@ onMounted(() => {
               ></NuxtImg>
               <div class="zoom-box" ref="zoomBox"></div>
               <div class="image-buttons">
-                <NuxtLink class="view-all view-all-btn" @click="viewAll">
+                <NuxtLink to="/view-all" class="view-all view-all-btn">
                   VIEW ALL
                 </NuxtLink>
                 <div
@@ -113,15 +114,22 @@ onMounted(() => {
                   class="pg-btn"
                   @click="() => (isHDImage = true)"
                 >
-                  <i class="fa-regular fa-high-definition"></i>
+                  <img
+                    src="@/assets/public/svg/hd-icon.svg"
+                    alt="hg-icon"
+                    class="pb-1"
+                  />
                 </div>
                 <a
                   :href="imgURLs[selectedImg]"
                   download
-                  class="px-4 btn-download"
+                  class="px-3 btn-download"
                   target="_blank"
                 >
-                  <i class="fas fa-cloud-download fa-lg"></i>
+                  <img
+                    src="@/assets/public/svg/cloud-download.svg"
+                    alt="download-icon"
+                  />
                 </a>
               </div>
             </div>
@@ -132,14 +140,14 @@ onMounted(() => {
           type="button"
           @click="changeImg('prev')"
         >
-          <i class="fa fa-chevron-left"></i>
+          <img src="@/assets/public/svg/left-button.svg" alt="hg-icon" />
         </button>
         <button
           class="carousel-control-next"
           type="button"
           @click="changeImg('next')"
         >
-          <i class="fa fa-chevron-right"></i>
+          <img src="@/assets/public/svg/right-button.svg" alt="hg-icon" />
         </button>
       </div>
       <div class="zoomed-image" ref="zoomedImage"></div>
