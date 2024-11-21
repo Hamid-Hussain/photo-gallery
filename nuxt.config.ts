@@ -35,9 +35,5 @@ export default defineNuxtConfig({
 
   modules: ["@nuxt/image"],
 
-  css: [
-    "@/assets/scss/style.scss",
-    "bootstrap/dist/css/bootstrap.min.css",
-    "@fortawesome/fontawesome-free/css/all.min.css",
-  ],
+  css: ["@/assets/scss/style.scss", "bootstrap/dist/css/bootstrap.min.css"],
 });
